@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woodline — Производство корпусной мебели</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #121824;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1a2234;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #d69e2e;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d69e2e;
+            letter-spacing: 2px;
+        }
+        .logo span { color: #fff; }
+        nav a {
+            color: #cbd5e0;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        nav a:hover { color: #d69e2e; }
+
+        .hero {
+            background: linear-gradient(rgba(18, 24, 36, 0.8), rgba(18, 24, 36, 0.9)), 
+                        url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80') center/cover;
+            padding: 80px 8%;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 38px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #cbd5e0;
+            max-width: 700px;
+            margin: 0 auto 25px;
+        }
+        .badge {
+            background: #d69e2e;
+            color: #121824;
+            padding: 6px 16px;
+            font-weight: bold;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .container {
+            padding: 50px 8%;
+        }
+        .section-title {
+            font-size: 26px;
+            color: #fff;
+            margin-bottom: 30px;
+            border-left: 4px solid #d69e2e;
+            padding-left: 15px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        .card {
+            background: #1a2234;
+            border: 1px solid #2d3748;
+            border-radius: 8px;
+            padding: 25px;
+            transition: 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #d69e2e;
+        }
+        .card h3 {
+            color: #ecc94b;
+            margin-bottom: 12px;
+        }
+
+        /* Карточки процессов и шагов */
+        .step-number {
+            font-size: 28px;
+            font-weight: bold;
+            color: #d69e2e;
+            margin-bottom: 8px;
+        }
+
+        .promo-box {
+            background: linear-gradient(135deg, #2c3a4e, #1a2234);
+            border: 2px solid #d69e2e;
+            border-radius: 12px;
+            padding: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+        .promo-text h2 {
+            color: #ecc94b;
+            margin-bottom: 10px;
+        }
+        .discount-badge {
+            background: #e53e3e;
+            color: #fff;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* Аккордеон / FAQ */
+        .faq-item {
+            background: #1a2234;
+            border: 1px solid #2d3748;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        .faq-item h3 {
+            color: #ecc94b;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background: #0f141d;
+            text-align: center;
+            padding: 25px;
+            color: #718096;
+            border-top: 1px solid #2d3748;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">WOOD<span>LINE</span></div>
+        <nav>
+            <a href="#about">О нас</a>
+            <a href="#catalog">Каталог</a>
+            <a href="#materials">Материалы</a>
+            <a href="#som">Собери сам</a>
+            <a href="#process">Этапы работы</a>
+            <a href="#faq">Вопросы</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <span class="badge">Более 10 лет опыта</span>
+        <h1>Корпусная мебель от производителя Woodline</h1>
+        <p>Полный цикл: от замеров и 3D-проектирования до собственного производства фасадов МДФ, доставки и монтажа.</p>
+    </section>
+
+    <div class="container">
+
+        <!-- О нас -->
+        <section id="about">
+            <h2 class="section-title">О компании и производстве</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Собственный цех МДФ</h3>
+                    <p>Изготовление фасадов любой сложности: покраска эмалью, обтяжка качественной плёнкой ПВХ и фигурная фрезеровка.</p>
+                </div>
+                <div class="card">
+                    <h3>Точный раскрой</h3>
+                    <p>Профессионально режем ЛДСП по вашим размерам с идеальной кромкой без сколов.</p>
+                </div>
+                <div class="card">
+                    <h3>Услуги "Под ключ"</h3>
+                    <p>Проводим замеры, делаем деталировку, создаем проекты, организуем аккуратную сборку и монтаж.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Подробно о технологиях цеха -->
+        <section>
+            <h2 class="section-title">Технологический процесс фасадов МДФ</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Покраска эмалью</h3>
+                    <p>Многослойная грунтовка, покраска и покрытие защитным лаком. Выбор из более чем 1000 оттенков (матовые, глянцевые, шелковистые).</p>
+                </div>
+                <div class="card">
+                    <h3>Обтяжка ПВХ-плёнкой</h3>
+                    <p>Использование вакуумных прессов с премиальными пленками. Текстуры дерева, бетон, софт-тач и суперматовые покрытия.</p>
+                </div>
+                <div class="card">
+                    <h3>3D и Классическая Фрезеровка</h3>
+                    <p>Высокоточные ЧПУ-станки вырезают ручки-мыльницы, классическую филёнку, геометрические линии и волны.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Акция СОМ -->
+        <section id="som">
+            <div class="promo-box">
+                <div class="promo-text">
+                    <h2>Программа «СОБЕРИ САМ» (СОМ)</h2>
+                    <p>Мы подготавливаем полный комплект распиленных деталей, фасадов, фурнитуры и чертежей.<br>Вы собираете сами и экономите бюджет!</p>
+                </div>
+                <div class="discount-badge">
+                    ЭКОНОМИЯ<br>ДО 35%
+                </div>
+            </div>
+        </section>
+
+        <!-- Расширенный Каталог -->
+        <section id="catalog">
+            <h2 class="section-title">Каталог мебели (Ознакомительный)</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Кухонные гарнитуры</h3>
+                    <p>Прямые, угловые и островные кухни с фасадами МДФ (краска/плёнка) и качественной фурнитурой.</p>
+                </div>
+                <div class="card">
+                    <h3>Шкафы и Гардеробные</h3>
+                    <p>Встроенные и стоящие отдельно шкафы с фрезерованными фасадами и австрийским ЛДСП.</p>
+                </div>
+                <div class="card">
+                    <h3>Мебель для Гостиных</h3>
+                    <p>Современные ТВ-зоны, подвесные тумбы, стеллажи и модульные стенки.</p>
+                </div>
+                <div class="card">
+                    <h3>Спальни и Прихожие</h3>
+                    <p>Функциональная мебель под индивидуальные параметры вашего помещения.</p>
+                </div>
+                <div class="card">
+                    <h3>Детская мебель</h3>
+                    <p>Безопасные экологичные материалы, скруглённые фрезерованные фасады и прочные корпуса.</p>
+                </div>
+                <div class="card">
+                    <h3>Рабочие зоны и Кабинеты</h3>
+                    <p>Письменные и компьютерные столы, стеллажи для документов и встроенные зоны хранения.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Этапы работы -->
+        <section id="process">
+            <h2 class="section-title">Как мы работаем</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="step-number">01</div>
+                    <h3>Замер и Консультация</h3>
+                    <p>Точный замер помещения с учетом розеток, коммуникаций и особенностей стен.</p>
+                </div>
+                <div class="card">
+                    <div class="step-number">02</div>
+                    <h3>Проект и Деталировка</h3>
+                    <p>Разрабатываем 3D-проект, подбираем сочетание МДФ и ЛДСП, готовим карты раскроя.</p>
+                </div>
+                <div class="card">
+                    <div class="step-number">03</div>
+                    <h3>Собственное Производство</h3>
+                    <p>Резка ЛДСП, покраска или оклейка фасадов МДФ в нашем цеху.</p>
+                </div>
+                <div class="card">
+                    <div class="step-number">04</div>
+                    <h3>Доставка и Монтаж</h3>
+                    <p>Аккуратно привозим и собираем мебель «под ключ» либо отдаём комплект по программе «СОМ».</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Материалы -->
+        <section id="materials">
+            <h2 class="section-title">Материалы и фасады</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Фасады МДФ</h3>
+                    <p>• МДФ Краска (эмаль, мат/глянец)<br>
+                       • МДФ Плёнка ПВХ<br>
+                       • Художественная фрезеровка</p>
+                </div>
+                <div class="card">
+                    <h3>Австрийский ЛДСП (EGGER)</h3>
+                    <p>• Экологичные плиты премиум-класса<br>
+                       • Высокая стойкость к влаге и износу<br>
+                       • Точная резка в размер</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Часто задаваемые вопросы -->
+        <section id="faq">
+            <h2 class="section-title">Часто задаваемые вопросы</h2>
+            <div class="faq-item">
+                <h3>Можно ли заказать только фасады МДФ или распил ЛДСП?</h3>
+                <p>Да! Поскольку у нас свой цех, вы можете заказать отдельное изготовление фасадов (краска/плёнка/фрезеровка) или распил ЛДСП по вашим размерам.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Что входит в программу «СОБЕРИ САМ»?</h3>
+                <p>Вы получаете полностью готовый «конструктор»: детали ЛДСП с обработанной кромкой, фасады МДФ, нужную фурнитуру и схему вашей мебели для сборки. Это экономит до 35% от итоговой стоимости.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Как происходит замер?</h3>
+                <p>Наш специалист выезжает к вам, снимает точные размеры и помогает определиться с конфигурацией.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        © 2026 Woodline — Производство корпусной мебели. Каталог предоставлен для ознакомления.
+    </footer>
+
+</body>
+</html>
